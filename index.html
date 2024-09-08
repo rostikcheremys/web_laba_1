@@ -1,0 +1,59 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BMW</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="icon" type="image" href="images/BMW_logo.png" />
+</head>
+<body>
+    <header class="header">
+        <div class="header-content">
+            <h1 class="header-text">BMW</h1>
+        </div>
+    </header>
+
+    <div class="wrapper">
+        <main class="container">
+            <div class="block top-left" data-model="BMW M3">
+                <img class="img-bmw_M3" src="images/BMW_M3.png" alt="BMW M3">
+            </div>
+            <div class="block top-right" data-model="BMW M4">
+                <img class="img-bmw_M4" src="images/BMW_M4.png" alt="BMW M4">
+            </div>
+            <div class="block bottom-left" data-model="BMW M8">
+                <img class="img-bmw_M8" src="images/BMW_M8.png" alt="BMW M8">
+            </div>
+            <div class="block bottom-right" data-model="BMW X5 M">
+                <img class="img-bmw_X5_M" src="images/BMW_X5_M.png" alt="BMW X5 M">
+            </div>
+        </main>
+
+        <aside class="sidebar">
+            <p></p>
+        </aside>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const blocks = document.querySelectorAll('.block');
+            const sidebar = document.querySelector('.sidebar');
+            const sidebarText = sidebar.querySelector('p');
+
+            sidebarText.textContent = 'BMW';
+
+            blocks.forEach(block => {
+                block.addEventListener('mouseover', function () {
+                    sidebarText.textContent = this.getAttribute('data-model');
+                    sidebar.classList.add('active');
+                });
+
+                block.addEventListener('mouseout', function () {
+                    sidebarText.textContent = 'BMW';
+                    sidebar.classList.remove('active');
+                });
+            });
+        });
+    </script>
+</body>
+</html>
