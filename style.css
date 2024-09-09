@@ -23,8 +23,7 @@ body {
     text-shadow: 2px 5px 5px darkgray;
 }
 
-.header-text::before,
-.header-text::after {
+.header-text::before, .header-text::after {
     position: absolute;
     color: white;
 }
@@ -36,6 +35,57 @@ body {
 
 .header-text::after {
     content: "_site";
+}
+
+.fixed-element {
+    position: fixed;
+    top: 15px;
+    right: 15px;
+    width: 45px;
+    height: 45px;
+    background-color: white;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.fixed-element:hover {
+    width: 250px;
+    height: 50px;
+    border-radius: 50px;
+}
+
+.telegram {
+    display: flex;
+    text-decoration: none;
+    font-size: 50px;
+    color: dodgerblue;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    transition: font-size 0.3s ease;
+}
+
+.telegram-text {
+    display: none;
+    color: dodgerblue;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
+    margin-left: 5px;
+    white-space: nowrap;
+}
+
+.fixed-element:hover .telegram {
+    font-size: 40px;
+}
+
+.fixed-element:hover .telegram-text {
+    display: inline;
+    font-size: 16px;
 }
 
 .gallery-section {
@@ -121,4 +171,125 @@ body {
     overflow: auto;
     background-color: white;
     border-radius: 13px;
+}
+
+.footer-content {
+    width: 100%;
+    height: 100%;
+    color: white;
+    background-color: #71777d;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 0;
+    font-weight: bold;
+}
+
+.footer-info p {
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.footer-inputs form {
+    margin: 15px 0;
+}
+
+.footer-inputs label {
+    font-size: 14px;
+    margin-right: 10px;
+}
+
+.footer-inputs input[type="email"] {
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-right: 10px;
+}
+
+.footer-inputs input[type="submit"] {
+    padding: 5px 10px;
+    background-color: #000;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.footer-inputs input[type="submit"]:hover {
+    background-color: #555;
+}
+
+.widget-social li {
+    list-style: none;
+    margin: 10px 0;
+}
+
+.widget-social a {
+    text-decoration: none;
+}
+
+.facebook, .instagram, .twitter {
+    color: white;
+    margin: 10px;
+}
+
+.facebook:hover {
+    color: blue;
+}
+
+.instagram:hover {
+    color: hotpink;
+}
+
+.twitter:hover {
+    color: dodgerblue;
+}
+
+.fa-facebook, .fa-instagram, .fa-twitter {
+    font-size: 16px;
+}
+
+.developer {
+    color: white;
+    font-size: 12px;
+}
+
+@media (max-width: 768px) {
+    .gallery-section {
+        flex-direction: column;
+    }
+
+    .cars-gallery {
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .car-item {
+        position: relative;
+        width: 90%;
+        height: auto;
+        margin-bottom: 10px;
+    }
+
+    .sidebar {
+        width: 100%;
+        height: auto;
+        margin: 20px 0;
+        writing-mode: horizontal-tb;
+        text-orientation: mixed;
+    }
+
+    .text-content {
+        flex-direction: column;
+        width: 100%;
+        gap: 20px;
+    }
+
+    .text-block {
+        width: 90%;
+        height: auto;
+    }
 }
