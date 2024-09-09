@@ -41,7 +41,7 @@ body {
 .wrapper {
     display: flex;
     justify-content: center;
-    margin-top: 50px;
+    margin-top: 20px;
 }
 
 .container {
@@ -84,8 +84,8 @@ body {
 }
 
 .block:hover {
-    width: 70%;
-    height: 70%;
+    width: 80%;
+    height: 80%;
     z-index: 1;
 }
 
