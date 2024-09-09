@@ -1,11 +1,11 @@
 document.addEventListener('DOMContentLoaded', function () {
-    const blocks = document.querySelectorAll('.block');
+    const carItem = document.querySelectorAll('.car-item');
     const sidebar = document.querySelector('.sidebar');
     const sidebarText = sidebar.querySelector('p');
 
     sidebarText.textContent = 'BMW';
 
-    blocks.forEach(block => {
+    carItem.forEach(block => {
         block.addEventListener('mouseover', function () {
             sidebarText.textContent = this.getAttribute('data-model');
             sidebar.classList.add('active');
