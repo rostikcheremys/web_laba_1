@@ -254,6 +254,16 @@ body {
     font-size: 12px;
 }
 
+@media (max-width: 1440px) {
+    .cars-gallery {
+        width: 80%;
+    }
+    .text-content {
+        width: calc(95% + 10px);
+    }
+
+}
+
 @media (max-width: 768px) {
     .gallery-section {
         flex-direction: column;
@@ -303,3 +313,4 @@ body {
         margin-top: 20px;
     }
 }
+
